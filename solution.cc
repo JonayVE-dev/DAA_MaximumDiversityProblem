@@ -21,3 +21,7 @@ std::string Solution::ToString() {
   }
   return solution_string;
 }
+
+/**
+ * The method recibe a Solution 
+*/

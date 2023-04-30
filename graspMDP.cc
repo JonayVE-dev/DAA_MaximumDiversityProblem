@@ -4,7 +4,7 @@ Solution GraspMDP::Constructive() {
   // First, we calculate the gravity center point of the points and add the farthest point to the solution
   Point gravity_center_point = GetGravityCenterPoint(points_);
   std::vector<Point> solution_points;
-  double max_distance = std::numeric_limits<double>::min();
+  double max_distance = -9999999999;
   int max_distance_point_index = -1;
   for (int i = 0; i < points_.size(); ++i) {
     double distance = gravity_center_point.Distance(points_[i]);
@@ -15,7 +15,7 @@ Solution GraspMDP::Constructive() {
   }
   solution_points.push_back(points_[max_distance_point_index]);
 
-  max_distance = std::numeric_limits<double>::min();
+  max_distance = -9999999999;
   max_distance_point_index = -1;
   for (int i = 1; i < number_of_points_; ++i) {
     std::vector<Point> lrc(lrc_size_);

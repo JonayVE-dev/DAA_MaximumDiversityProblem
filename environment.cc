@@ -9,10 +9,12 @@ Solution Environment::LocalSearch(std::vector<Point> points) {
   Solution best_solution = solution_;
   do {
     solution_ = best_solution;
-    std::vector<Solution> neighbors = GetNeighborhood(points);
+    double current_value = solution_.Value();
+    std::vector<std::pair<Solution, double>> neighbors = GetNeighborhood(points);
     for (auto neighbor : neighbors) {
-      if (neighbor.Value() > best_solution.Value()) {
-        best_solution = neighbor;
+      double neighbor_value = neighbor.second;
+      if (neighbor_value > current_value) {
+        best_solution = neighbor.first;
       }
     }
     ++iterations;

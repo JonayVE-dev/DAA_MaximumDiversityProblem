@@ -5,5 +5,5 @@
 class ChangeEnvironment : public Environment {
  public:
   ChangeEnvironment(int iterations = 1000) : Environment(iterations) {}
-  std::vector<Solution> GetNeighborhood(std::vector<Point> points);
+  std::vector<std::pair<Solution, double>> GetNeighborhood(std::vector<Point> points);
 };
