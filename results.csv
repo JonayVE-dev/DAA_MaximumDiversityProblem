@@ -413,3 +413,29 @@ Problema,n,K,m,z,S,CPU,Iter,|LRC|
 max_div_15_2.txt,15,2,5,79.129530,8 6 3 5 0,0.016728,100,3
 Problema,n,K,m,z,S,CPU,Iter,|LRC|
 max_div_15_2.txt,15,2,5,79.129530,8 6 3 5 0,0.009909,100,3
+Problema,n,K,m,z,S,CPU
+max_div_30_2.txt,32,2,5,85.751835,8 30 31 22 1,0.000111
+Problema,n,K,m,z,S,CPU
+max_div_30_2.txt,32,2,5,85.751835,8 30 31 22 1,0.000050
+Problema,n,K,m,z,S,CPU
+max_div_30_2.txt,32,2,5,85.751835,8 30 31 22 1,0.000051
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.202905,8 30 1 10 31,0.005655,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.202905,8 31 1 30 10,0.004925,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.720542,8 31 1 8 31,0.006148,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.720542,8 31 1 8 31,0.007819,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.720542,8 31 30 8 1,0.014830,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.202905,8 31 30 1 10,0.002567,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.720542,8 30 1 31 8,0.004358,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.720542,8 31 31 8 1,0.008956,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.202905,8 30 1 10 31,0.001048,100,3
+Problema,n,K,m,z,S,CPU,Iter,|LRC|
+max_div_30_2.txt,32,2,5,88.202905,8 30 1 10 31,0.004822,100,3

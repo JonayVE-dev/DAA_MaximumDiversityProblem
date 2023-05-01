@@ -22,8 +22,6 @@ std::vector<std::pair<Solution, double>> ChangeEnvironment::GetNeighborhood(std:
             new_value -= solution_.GetPoints()[i].Distance(solution_.GetPoints()[k]);
           }
         }
-        std::cout << "New value: " << new_value << std::endl;
-        std::cout << "New value using value function: " << Solution(new_solution).Value() << std::endl << std::endl;
         neighborhood.push_back(std::pair<Solution, int>(Solution(new_solution), new_value));
       }
     }
