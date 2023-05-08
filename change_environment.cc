@@ -1,4 +1,5 @@
 #include "change_environment.h"
+#include <algorithm>
 
 /**
  * @brief Get the neighbord solution of the current solution
@@ -12,7 +13,15 @@ std::vector<std::pair<Solution, double>> ChangeEnvironment::GetNeighborhood(std:
   double current_value = solution_.Value();
   for (int i = 0; i < solution_.GetPoints().size(); ++i) {
     for (int j = 0; j < points.size(); ++j) {
-      if (solution_.GetPoints()[i].GetId() != points[j].GetId()) {
+      // comprobar que point[j] no esta en solution_
+      bool found = false;
+      for (int k = 0; k < solution_.GetPoints().size(); ++k) {
+        if (solution_.GetPoints()[k].GetId() == points[j].GetId()) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
         std::vector<Point> new_solution = solution_.GetPoints();
         new_solution[i] = points[j];
         double new_value = current_value;
@@ -22,8 +31,8 @@ std::vector<std::pair<Solution, double>> ChangeEnvironment::GetNeighborhood(std:
             new_value -= solution_.GetPoints()[i].Distance(solution_.GetPoints()[k]);
           }
         }
-        neighborhood.push_back(std::pair<Solution, int>(Solution(new_solution), new_value));
-      }
+        neighborhood.push_back(std::pair<Solution, double>(Solution(new_solution), new_value));
+      }   
     }
   }
   return neighborhood;

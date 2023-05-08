@@ -35,6 +35,9 @@ Solution GraspMDP::Constructive() {
       }
     }
     int rand_index = rand() % lrc.size();
+    while (lrc[rand_index].GetDimension() == 0) {
+      rand_index = rand() % lrc.size();
+    }
     solution_points.push_back(lrc[rand_index]);
   }
   return Solution(solution_points);
